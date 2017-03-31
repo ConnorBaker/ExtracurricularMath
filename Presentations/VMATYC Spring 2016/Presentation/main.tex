@@ -99,6 +99,14 @@
 \end{frame}
 
 
+
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                       WHOLE NUMBERS                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,7 +130,7 @@
     A base (or radix) is a mathematical building block used to describe a number system whose digits are used to represent numbers.
   \end{block}\pause
 
-  \begin{example}[Different Whole Number Bases]
+  \begin{example}[Different Whole Number Bases]\pause
     $125_{10}$ \pause
 
     $888_9$ \pause
@@ -138,21 +146,21 @@
     The number of numerals in a base is one less than the base.
   \end{block}\pause
 
-  \begin{example}[Allowed Numbers in Different Bases]
+  \begin{example}[Allowed Numbers in Different Bases]\pause
     $125_{10}$ \pause
 
     $888_9$ \pause
 
-    $48.5_8$ \pause
+    $48.5_8$
   \end{example}
 \end{frame}
 % Corrected version of above slide with purposeful base typo
 \begin{frame}{Definition}
   \begin{block}{Maximum Allowed Numeral in Base}
-    The radix is the number of numerals allowed in a base, and it includes zero. \pause
+    The radix is the number of numerals allowed in a base, and it includes zero.
 
     The number of numerals in a base is one less than the base.
-  \end{block} \pause
+  \end{block}
 
   \begin{example}[Allowed Numbers in Different Bases]
     $125_{10}$
@@ -168,10 +176,10 @@
     A point used to separate the integer part of a number from the fractional part.
   \end{block}\pause
 
-  \begin{example}[Radix Point Expressions]
-      $10.5_{10}$
+  \begin{example}[Radix Point Expressions]\pause
+      $10.5_{10}$ \pause
 
-      A5.E$_{16}$
+      A5.E$_{16}$ \pause
 
       $1.1_2$
   \end{example}
@@ -182,7 +190,7 @@
     A means of rewriting a number as the digits multiplied by the base which is raised to the power of position of the digit.
   \end{block}\pause
 
-  \begin{example}[Example of Beta Expansions]
+  \begin{example}[Example of Beta Expansions]\pause
     $125_{10} = 1\times10^2 + 2\times10^1 + 5\times10^0$ \pause
 
     A5.E$_{16} = 10\times16^1 + 5\times16^0 + 14\times16^-1$ \pause
@@ -211,89 +219,92 @@
     \item You're allowed one operation
     \begin{itemize}
       \item Multiplication by a whole number, followed by modulo one \pause
-      \item Once you choose a multiplier, you must use it for the duration
+      \item Once you choose a multiplier, you must use it for the duration \pause
     \end{itemize}
+    \item We keep track of the interval that it falls in after the operation
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Binary/1}
   \end{example}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Binary/2}
   \end{example}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Binary/3}
   \end{example}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Binary/4}
   \end{example}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Binary/5}
   \end{example}
 \end{frame}
 
+\begin{frame}{How Partitioning Works}
+  \begin{itemize}
+    \item We partition before we multiply \pause
+    \item We multiply so that the first partition becomes the unit interval \pause
+    \begin{itemize}
+      \item The number we multiply by is the base that we are converting to \pause
+    \end{itemize}
+    \item So for binary, this is what we doing:
+  \end{itemize}
+  \includegraphics[width=\textwidth]{images/partitioning/partitioning}
+\end{frame}
+
 \begin{frame}{What this Tells Us}
   \begin{itemize}
-    \item This tells us two things:
+    \item Where the point was originally \pause
     \begin{itemize}
-      \item Where the point was originally
-      \item Whether there is a finite radix point expression in a given base
-    \end{itemize}
+      \item The conversion of $0.25_{10}$ to a number in binary: $0.01_2$
+      \item We can check this with a beta expansion: $0.01_2 = 0\times2^{0} + 0\times2^{-1} + 1\times2^{-2} = 1/4 = 0.25_{10}$
+    \end{itemize} \pause
+  \item That there is a finite radix point expression in a given base \pause
+  \item That our choice of partitioning and multiplication matter... this is what happens geometrically when we change bases \pause
+  \item Let's do another example
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Wait, What?}
-  \begin{itemize}
-    \item Our choice of partitioning and multiplication matter
-    \begin{itemize}
-      \item We just converted $0.25_{10}$ to a number in binary: $0.01_2$
-      \item We can check with a beta expansion: $0.01_2 = 0\times2^{0} + 0\times2^{-1} + 1\times2^{-2} = 1/4 = 0.25_{10}$
-    \end{itemize}
-    \item The fact we didn't get stuck in a loop means that there was a finite representation
-    \item This is what is happening geometrically when we change bases \pause
-    \item What happens when multiply by a different number?
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Ternary/1}
   \end{example}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Ternary/2}
   \end{example}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Ternary/3}
   \end{example}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Ternary/4}
   \end{example}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Geometrically)}
+\begin{frame}{Dealing with Radix Point Expressions (Geometrically)}
   \begin{example}[Suppose you have a point...]
     \includegraphics[width=\textwidth,height=0.75\textheight]{images/Ternary/5}
   \end{example}
@@ -301,16 +312,35 @@
 
 \begin{frame}{What this Tells Us}
   \begin{itemize}
-    \item What does this cycle mean?
+    \item Getting stuck in this cycle means this number is not representable as a finite radix point expression in base 3 \pause
+    \item This can happen in any base \pause
     \begin{itemize}
-      \item This number is not representable as a finite radix point expression in base 3
-    \end{itemize}
-    \item This can happen in any base
-    \begin{itemize}
-      \item Arithmetically this happens when the number can't be written as something divided by multiples of the prime factors of the base
+      \item We can explain this phenomenon arithmetically
     \end{itemize}
   \end{itemize}
 \end{frame}
+
+\begin{frame}{Theorem}
+  \begin{block}{Finite Radix Point Expression} \pause
+    A number $p$ is said to have a finite radix point expression if $$p=\frac{n}{m_1 m_2\dots m_k}$$ where $n\in\mathbb{N}$, and $m_1 m_2 \dots m_k$ are all the prime factors of the base raised to some power. \footnotetext{\url{http://mathworld.wolfram.com/DecimalExpansion.html}}
+  \end{block}\pause
+
+  \begin{example}[1/3 in Base 10]
+    $$\frac{1}{3} \neq \frac{n}{2^\alpha 5^\beta}$$
+
+    where $n,\alpha,\beta\in\mathbb{N}$.
+  \end{example}
+\end{frame}
+
+\begin{frame}{Dealing with Radix Point Expressions (Arithmetically)}
+  \begin{itemize}
+    \item We can do this operation with arithmetic \pause
+      \begin{itemize}
+        \item We must first qualify what we were doing in our $``$game" previously
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
 
 \begin{frame}{Definition}
   \begin{block}{Beta Map}
@@ -318,7 +348,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Dealing with Radix Point Numbers (Arithmetically)}
+\begin{frame}{Dealing with Radix Point Expressions (Arithmetically)}
   \begin{example}[Convert $0.1_{10}$ to binary.]\pause
     \begin{enumerate}
       \item[] 0.1 * 2 = 0.2 \qquad 0.2 mod (1) = 0.2 \hfill 0.0\pause
@@ -330,38 +360,6 @@
     \end{enumerate}
     \hfill $0.0\overline{0011}_2$
   \end{example}
-\end{frame}
-
-\begin{frame}{What Makes a Finite Radix Point Expression}
-  \begin{itemize}
-    \item That was another example of a number that is not expressable as a finite representation \pause
-    \item We know when this occurs geometrically, but not arithmetically
-    \item Why does this happen?
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Finite Radix Point Expression}
-  \begin{block}{Finite Radix Point Expression}
-    A number $p$ is said to have a finite radix point expression if $$p=\frac{n}{m_1 m_2\dots m_k}$$ where $n\in\mathbb{N}$, and $m_1 m_2 \dots m_k$ are all the prime factors of the base raised to some power \footnotetext{\url{http://mathworld.wolfram.com/DecimalExpansion.html}}
-  \end{block}\pause
-
-  \begin{example}[1/3 in Base 10]
-    $$\frac{1}{3} \neq \frac{n}{2^\alpha 5^\beta}$$
-
-    where $n,\alpha,\beta\in\mathbb{N}$.
-  \end{example}
-\end{frame}
-
-\begin{frame}{How Partitioning Works}
-  \begin{itemize}
-    \item We partition before we multiply
-    \item We multiply so that the first partition becomes the unit interval
-    \begin{itemize}
-      \item The number we multiply by is the base that we are converting to
-    \end{itemize}
-    \item So for binary:
-  \end{itemize}
-  \includegraphics[width=\textwidth]{images/partitioning/partitioning}
 \end{frame}
 
 
@@ -384,10 +382,10 @@
 \subsection{Language Generated by Whole Number Bases}
 \begin{frame}{Definition}
   \begin{block}{Word}
-    A word is a sequence of characters allowed by the definition of its language
+    A word is a sequence of characters allowed by the definition of its language.
   \end{block}\pause
 
-  \begin{example}[Examples of Words]
+  \begin{example}[Examples of Words] \pause
     Cat (English)\pause
 
     101 (Binary) \pause
@@ -398,10 +396,10 @@
 
 \begin{frame}{Definition}
   \begin{block}{Language}
-    A language is the set of all allowed words defined by some rule
+    A language is the set of all allowed words defined by some rule.
   \end{block}\pause
 
-  \begin{example}[Examples of Languages]
+  \begin{example}[Examples of Languages]\pause
     English \pause
 
     Numerical Bases \pause
@@ -412,9 +410,9 @@
 
 \begin{frame}{Language Generated by Whole Number Bases}
   \begin{itemize}
-    \item A word is not allowed in a language if it contains a forbidden subword
+    \item A word is not allowed in a language if it contains a forbidden subword \pause
     \begin{itemize}
-      \item Acceptable words in base 10 include 9, or 5.5 -- but not CAT or 5Z: they contain forbidden subwords
+      \item Acceptable words in base 10 include 9, or 5.5 -- but not CAT or 5Z: they contain forbidden subwords \pause
       \item Acceptable words in base 2 include 1, or 0.110000 -- but not 3, or 4: they contain forbidden subwords
     \end{itemize}\pause
     \item How can we represent the language generated by these bases?
@@ -423,7 +421,7 @@
 
 \begin{frame}{Definition}
   \begin{block}{Finite State Machine}
-    A finite state machine (FSM) is a mathematical structure that allows us to imagine a machine with no memory
+    A finite state machine (FSM) is a mathematical structure that allows us to imagine a machine with no memory.
   \end{block}
 \end{frame}
 
@@ -441,8 +439,6 @@
     \end{tikzpicture}
   \end{center}
 \end{frame}
-
-
 
 \begin{frame}{FSM for Ternary}
   \begin{center}
@@ -462,8 +458,6 @@
   \end{center}
 \end{frame}
 
-
-
 \begin{frame}{Simplified FSM for Ternary}
   \begin{center}
     \begin{tikzpicture}[scale=0.2]
@@ -475,8 +469,6 @@
     \end{tikzpicture}
   \end{center}
 \end{frame}
-
-
 
 \begin{frame}{FSM for Whole Number Bases}
   \begin{center}
@@ -508,11 +500,26 @@
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                     NON-INTEGER NUMBERS                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Non-Integer Algebraic Numbers}
+
+
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                          DEFINITIONS                         %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Definitions}
+\subsection{Definitions}
 \begin{frame}{Definition}
   \begin{block}{Orbit}
     The unique, non-terminating radix point representation of a number in any base.
@@ -538,85 +545,24 @@
 
 
 
-            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            %%                 PARTITIONING DIFFERENTLY                    %%
-            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            \begin{frame}{Partitioning Differently}
-              \begin{itemize}
-                \item We don't have to use a whole number
-                \item The partitions won't be even, but that's not a problem
-              \end{itemize}
-              \includegraphics[width=\textwidth]{images/partitioning/partitioningbeta}
-            \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                 PARTITIONING DIFFERENTLY                    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Partitioning Differently}
+  \begin{itemize}
+    \item We don't have to use a whole number
+    \item The partitions won't be even, but that's not a problem
+  \end{itemize}
+  \includegraphics[width=\textwidth]{images/partitioning/partitioningbeta}
+\end{frame}
 
-            \begin{frame}{Partitioning Differently}
-              \begin{itemize}
-                \item We don't have to use a whole number
-                \item The partitions won't be even, but that's not a problem
-              \end{itemize}
-              \includegraphics[width=\textwidth]{images/partitioning/partitioningalpha}
-            \end{frame}
-
-
-
-
-
-            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            %%        EXAMPLES AND PROPERTIES OF NON-INTEGER BASES          %%
-            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            \section{Examples and Properties of Non-Integer Bases}
-            \begin{frame}{Examples of Non-Integer Bases}
-              \begin{itemize}
-                \item Base Golden Ratio
-                \item Base Silver Ratio
-              \end{itemize}
-            \end{frame}
-
-            \begin{frame}{Properties of Non-Integer Bases}
-              \begin{itemize}
-                \item There will be forbidden words
-                \begin{itemize}
-                  \item We can find these by using the orbit of any whole number in these bases (one is the easiest choice)
-                \end{itemize}
-                \item It is easy/interesting to represent certain numbers in these bases
-                \item Arithmetic is more of a pain than usual
-              \end{itemize}
-            \end{frame}
-
-            \begin{frame}{Golden Ratio}
-              \begin{block}{Golden Ratio}
-                The positive solution to the equation $\varphi^2 = \varphi + 1$.
-
-                $\varphi = \frac{1+\sqrt{5}}{2} \approx 1.618$.
-              \end{block}
-            \end{frame}
-
-            \begin{frame}{Golden Ratio Addition}
-              \begin{example}[$1_\varphi + 1_\varphi$]
-                $1_\varphi = 0.11\varphi$
-
-                $1_\varphi + 0.11\varphi = 1.11\varphi = 10.01_\varphi$
-
-                We can double check this operation by doing a beta expansion and using the definition of the base.
-              \end{example}
-            \end{frame}
-
-            \begin{frame}{Golden Ratio Addition}
-              \begin{example}[$1_\varphi + 1_\varphi$]
-                $10.01_\varphi = 1\times\varphi^1+0\times\varphi^0+0\times\varphi^{-1}+1\times\varphi^{-2}=\varphi + 1/\varphi^2 =$
-
-                $(\varphi^2 + 1)/\varphi^2 = 2_{10}$
-              \end{example}
-            \end{frame}
-
-
-            \begin{frame}{Silver Ratio}
-              \begin{block}{Silver Ratio}
-                The positive solution to the equation $\alpha^2 = 2\alpha + 1$.
-
-                $\alpha = 1+\sqrt{2} \approx 2.414$.
-              \end{block}
-            \end{frame}
+\begin{frame}{Partitioning Differently}
+  \begin{itemize}
+    \item We don't have to use a whole number
+    \item The partitions won't be even, but that's not a problem
+  \end{itemize}
+  \includegraphics[width=\textwidth]{images/partitioning/partitioningalpha}
+\end{frame}
 
 
 
@@ -630,92 +576,175 @@
 
 
 
-            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            %%             LANGUAGE GENERATED BY NON-INTEGER BASES          %%
-            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            \section{Language Generated by Non-Integer Bases}
-            \begin{frame}{Finding Forbidden Words}
-              \begin{itemize}
-                \item Take the orbit of one
-                \item Find the period
-                \item Any sequence of numerals greater than the numerals of the period is not allowed
-              \end{itemize}
-            \end{frame}
 
-            \begin{frame}{What Makes a Word Forbidden in Non-Integer Bases?}
-              \begin{itemize}
-                \item In general, a word is forbidden if it is not in simplest form
-                \item In actuality, it is because it escapes the range of the beta map
-              \end{itemize}
-            \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                EXAMPLES WITH NON-INTEGER BASES               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Examples}
 
-            \begin{frame}{Escaping the Beta Map}
-              \begin{example}[$T(0.011_\varphi)$]
-                $T(0.011_\varphi)=0.11_\varphi=1.00_\varphi$
-                But that can't happen! By definition, $T:[0,1)\to[0,1)$. As such, we say that this is a forbidden word.
 
-                How do we find forbidden words?
-              \end{example}
-            \end{frame}
 
-            \begin{frame}{Finding Forbidden Words}
-              \begin{itemize}
-                \item The orbit of one is composed of the maximum allowed word in a language
-                \item All the forbidden words then will subwords of the orbit, with one added until the word is the maximum allowed in the language
-              \end{itemize}
-            \end{frame}
 
-            \begin{frame}{Language Generated by base Golden Ratio}
-              \begin{itemize}
-                \item $0.\overline{10}_\varphi$ is the orbit of one in base golden ratio
-                \item Since the maximum allowed word in the language is 10, we add one and find that the forbidden word is 11.
-                \item There can be more than one forbidden word, but since the maximum allowed numeral in base golden ratio is 1, we can't add one again without changing the length.
-                \item With this in mind, we can now create a finite state machine
-              \end{itemize}
-            \end{frame}
 
-            \begin{frame}{FSM For Language Generated by Base Golden Ratio}
-              \begin{center}
-                \begin{tikzpicture}[scale=0.2]
-                  \tikzstyle{every node}+=[inner sep=0pt]
-                  \draw [black] (33.9,-29.4) circle (3);
-                  \draw [black] (50.2,-29.4) circle (3);
-                  \draw [black] (31.22,-30.723) arc (-36:-324:2.25);
-                  \draw (26.65,-29.4) node [left] {$0$};
-                  \fill [black] (31.22,-28.08) -- (30.87,-27.2) -- (30.28,-28.01);
-                  \draw [black] (48.1,-31.527) arc (-53.15335:-126.84665:10.089);
-                  \fill [black] (48.1,-31.53) -- (47.16,-31.61) -- (47.76,-32.41);
-                  \draw (42.05,-34.04) node [below] {$1$};
-                  \draw [black] (35.982,-27.255) arc (127.27809:52.72191:10.019);
-                  \fill [black] (35.98,-27.26) -- (36.92,-27.17) -- (36.32,-26.37);
-                  \draw (42.05,-24.71) node [above] {$0$};
-                \end{tikzpicture}
-              \end{center}
-            \end{frame}
 
-            \begin{frame}{Language Generated by base Silver Ratio}
-              \begin{itemize}
-                \item $0.\overline{20}_\alpha$ is the orbit of one in base silver ratio
-                \item Therefore, 21 and 22 are forbidden words in the language
-              \end{itemize}
-            \end{frame}
 
-            \begin{frame}{FSM For Language Generated by Base Silver Ratio}
-              \begin{center}
-                \begin{tikzpicture}[scale=0.2]
-                  \tikzstyle{every node}+=[inner sep=0pt]
-                  \draw [black] (33.9,-29.4) circle (3);
-                  \draw [black] (50.2,-29.4) circle (3);
-                  \draw [black] (31.22,-30.723) arc (-36:-324:2.25);
-                  \draw (26.65,-29.4) node [left] {$0,1$};
-                  \fill [black] (31.22,-28.08) -- (30.87,-27.2) -- (30.28,-28.01);
-                  \draw [black] (48.1,-31.527) arc (-53.15335:-126.84665:10.089);
-                  \fill [black] (48.1,-31.53) -- (47.16,-31.61) -- (47.76,-32.41);
-                  \draw (42.05,-34.04) node [below] {$2$};
-                  \draw [black] (35.982,-27.255) arc (127.27809:52.72191:10.019);
-                  \fill [black] (35.98,-27.26) -- (36.92,-27.17) -- (36.32,-26.37);
-                  \draw (42.05,-24.71) node [above] {$0$};
-                \end{tikzpicture}
-              \end{center}
-            \end{frame}
-            \end{document}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        EXAMPLES AND PROPERTIES OF NON-INTEGER BASES          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Properties of Non-Integer Bases}
+\begin{frame}{Examples of Non-Integer Bases}
+  \begin{itemize}
+    \item Base Golden Ratio
+    \item Base Silver Ratio
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Properties of Non-Integer Bases}
+  \begin{itemize}
+    \item There will be forbidden words
+    \begin{itemize}
+      \item We can find these by using the orbit of any whole number in these bases (one is the easiest choice)
+    \end{itemize}
+    \item It is easy/interesting to represent certain numbers in these bases
+    \item Arithmetic is more of a pain than usual
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Golden Ratio}
+  \begin{block}{Golden Ratio}
+    The positive solution to the equation $\varphi^2 = \varphi + 1$.
+
+    $\varphi = \frac{1+\sqrt{5}}{2} \approx 1.618$.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Golden Ratio Addition}
+  \begin{example}[$1_\varphi + 1_\varphi$]
+    $1_\varphi = 0.11\varphi$
+
+    $1_\varphi + 0.11\varphi = 1.11\varphi = 10.01_\varphi$
+
+    We can double check this operation by doing a beta expansion and using the definition of the base.
+  \end{example}
+\end{frame}
+
+\begin{frame}{Golden Ratio Addition}
+  \begin{example}[$1_\varphi + 1_\varphi$]
+    $10.01_\varphi = 1\times\varphi^1+0\times\varphi^0+0\times\varphi^{-1}+1\times\varphi^{-2}=\varphi + 1/\varphi^2 =$
+
+    $(\varphi^2 + 1)/\varphi^2 = 2_{10}$
+  \end{example}
+\end{frame}
+
+
+\begin{frame}{Silver Ratio}
+  \begin{block}{Silver Ratio}
+    The positive solution to the equation $\alpha^2 = 2\alpha + 1$.
+
+    $\alpha = 1+\sqrt{2} \approx 2.414$.
+  \end{block}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%             LANGUAGE GENERATED BY NON-INTEGER BASES          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Language Generated by Non-Integer Bases}
+\begin{frame}{Finding Forbidden Words}
+  \begin{itemize}
+    \item Take the orbit of one
+    \item Find the period
+    \item Any sequence of numerals greater than the numerals of the period is not allowed
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{What Makes a Word Forbidden in Non-Integer Bases?}
+  \begin{itemize}
+    \item In general, a word is forbidden if it is not in simplest form
+    \item In actuality, it is because it escapes the range of the beta map
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Escaping the Beta Map}
+  \begin{example}[$T(0.011_\varphi)$]
+    $T(0.011_\varphi)=0.11_\varphi=1.00_\varphi$
+    But that can't happen! By definition, $T:[0,1)\to[0,1)$. As such, we say that this is a forbidden word.
+
+    How do we find forbidden words?
+  \end{example}
+\end{frame}
+
+\begin{frame}{Finding Forbidden Words}
+  \begin{itemize}
+    \item The orbit of one is composed of the maximum allowed word in a language
+    \item All the forbidden words then will subwords of the orbit, with one added until the word is the maximum allowed in the language
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Language Generated by base Golden Ratio}
+  \begin{itemize}
+    \item $0.\overline{10}_\varphi$ is the orbit of one in base golden ratio
+    \item Since the maximum allowed word in the language is 10, we add one and find that the forbidden word is 11.
+    \item There can be more than one forbidden word, but since the maximum allowed numeral in base golden ratio is 1, we can't add one again without changing the length.
+    \item With this in mind, we can now create a finite state machine
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{FSM For Language Generated by Base Golden Ratio}
+  \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+      \tikzstyle{every node}+=[inner sep=0pt]
+      \draw [black] (33.9,-29.4) circle (3);
+      \draw [black] (50.2,-29.4) circle (3);
+      \draw [black] (31.22,-30.723) arc (-36:-324:2.25);
+      \draw (26.65,-29.4) node [left] {$0$};
+      \fill [black] (31.22,-28.08) -- (30.87,-27.2) -- (30.28,-28.01);
+      \draw [black] (48.1,-31.527) arc (-53.15335:-126.84665:10.089);
+      \fill [black] (48.1,-31.53) -- (47.16,-31.61) -- (47.76,-32.41);
+      \draw (42.05,-34.04) node [below] {$1$};
+      \draw [black] (35.982,-27.255) arc (127.27809:52.72191:10.019);
+      \fill [black] (35.98,-27.26) -- (36.92,-27.17) -- (36.32,-26.37);
+      \draw (42.05,-24.71) node [above] {$0$};
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Language Generated by base Silver Ratio}
+  \begin{itemize}
+    \item $0.\overline{20}_\alpha$ is the orbit of one in base silver ratio
+    \item Therefore, 21 and 22 are forbidden words in the language
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{FSM For Language Generated by Base Silver Ratio}
+  \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+      \tikzstyle{every node}+=[inner sep=0pt]
+      \draw [black] (33.9,-29.4) circle (3);
+      \draw [black] (50.2,-29.4) circle (3);
+      \draw [black] (31.22,-30.723) arc (-36:-324:2.25);
+      \draw (26.65,-29.4) node [left] {$0,1$};
+      \fill [black] (31.22,-28.08) -- (30.87,-27.2) -- (30.28,-28.01);
+      \draw [black] (48.1,-31.527) arc (-53.15335:-126.84665:10.089);
+      \fill [black] (48.1,-31.53) -- (47.16,-31.61) -- (47.76,-32.41);
+      \draw (42.05,-34.04) node [below] {$2$};
+      \draw [black] (35.982,-27.255) arc (127.27809:52.72191:10.019);
+      \fill [black] (35.98,-27.26) -- (36.92,-27.17) -- (36.32,-26.37);
+      \draw (42.05,-24.71) node [above] {$0$};
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+\end{document}

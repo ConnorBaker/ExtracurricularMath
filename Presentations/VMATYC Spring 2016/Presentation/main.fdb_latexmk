@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1490917854 "main.tex" "main.pdf" "main" 1490917860
+["pdflatex"] 1490920554 "main.tex" "main.pdf" "main" 1490920560
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -224,16 +224,16 @@
   "images/partitioning/partitioning.png" 1490885345 27193 df7050418cd15a1176e0ab2997515365 ""
   "images/partitioning/partitioningalpha.png" 1490897381 29361 ac2970f6021f84c7f3ca90744cd6a27f ""
   "images/partitioning/partitioningbeta.png" 1490897684 27487 40d17d7d85cbbe6d3e7b843ddcc374d9 ""
-  "main.aux" 1490917860 10422 0d25dcf84d499523b45a97bccf9afd9e ""
-  "main.nav" 1490917860 6889 60c5bfa88edd2615e9c7de3cf7cee4df ""
-  "main.out" 1490917860 455 44be32b9f06587edb5a69f1a755cd464 ""
-  "main.tex" 1490917845 24201 efc60aaca2d2551715b363288d1b357a ""
-  "main.toc" 1490917860 441 80105611ef5ce2021bbb2a9a95b0cc7c ""
+  "main.aux" 1490920560 11682 1748150042ae1876b5831d6b0aab0781 ""
+  "main.nav" 1490920560 7918 44840c1ddaa149c0a27da6c108a57c86 ""
+  "main.out" 1490920560 610 18dc18a47927250350fe7afbecd590cd ""
+  "main.tex" 1490920541 22794 4c76cc6ae29f14e8f26d6de1b9ddd61a ""
+  "main.toc" 1490920560 564 fa9a59250383e70e74854703493c6c67 ""
   (generated)
+  "main.toc"
+  "main.aux"
   "main.snm"
   "main.nav"
   "main.log"
-  "main.toc"
-  "main.aux"
   "main.out"
   "main.pdf"
