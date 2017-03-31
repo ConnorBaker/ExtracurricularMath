@@ -194,7 +194,7 @@
   \begin{example}[Example of Beta Expansions]\pause
     $125_{10} = 1\times10^2 + 2\times10^1 + 5\times10^0$ \pause
 
-    A5.E$_{16} = 10\times16^1 + 5\times16^0 + 14\times16^-1$ \pause
+    A5.E$_{16} = 10\times16^1 + 5\times16^0 + 14\times16^{-1}$ \pause
 
     $20_2 = 2\times10^1+0\times2^0$
   \end{example}
@@ -263,7 +263,7 @@
     \begin{itemize}
       \item The number we multiply by is the base that we are converting to \pause
     \end{itemize}
-    \item So for binary, this is what we doing:
+    \item So for binary, this is what we were doing:
   \end{itemize}
   \includegraphics[width=\textwidth]{images/partitioning/partitioning}
 \end{frame}
@@ -403,7 +403,7 @@
 
     Numerical Bases \pause
 
-    Sounds a bird makes while chirping
+    All the sounds my cat can make
   \end{example}
 \end{frame}
 
@@ -537,6 +537,14 @@
   \begin{block}{Algebraic Integer}
     A number $x$ is an algebraic integer if it is the root of a monic polynomial $f(x) = x^n + a_{n-1}x^{n-1}+\dots+a_1x+a_0$, where $a_{n-1},\dots,a_0\in\mathbb{Z}$.
   \end{block}
+
+  \begin{example}[Examples of Algebraic Polynomials]\pause
+    $$x^2 - x - 1 = 0, \quad x=\frac{1\pm\sqrt{5}}{2}$$\pause
+
+    $$x^2 - 2x - 1 = 0, \quad x = 1\pm\sqrt{2}$$\pause
+
+    $$x^3 -x - 1 = 0, \quad x=\frac{1}{3}\sqrt[3]{\frac{27-3\sqrt{69}}{2}} + \frac{\sqrt[3]{\frac{1}{2}(9 + \sqrt{69})}}{3^{2/3}}$$
+  \end{example}
 \end{frame}
 
 
@@ -679,7 +687,6 @@
   \begin{example}[Golden Base Ratio: $T(0.011_\varphi)$]
     Using our previous example:
     $$T(0.011_\varphi)=0.11_\varphi=1.00_\varphi.$$ \pause
-
     But that can't happen! By definition, $T:[0,1)\to[0,1)$. As such, we say that this is a forbidden word. \pause
 
     Geometrically, this can't happen. If we multiply a number in [0,1) by any number and perform (mod 1), we will never get a number larger than one.
