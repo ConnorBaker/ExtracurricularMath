@@ -196,7 +196,7 @@
 
     A5.E$_{16} = 10\times16^1 + 5\times16^0 + 14\times16^{-1}$ \pause
 
-    $20_2 = 2\times10^1+0\times2^0$
+    $10_2 = 1\times10^1+0\times2^0$
   \end{example}
 \end{frame}
 
@@ -700,9 +700,6 @@
 \begin{frame}{Properties of Non-Integer Bases}
   \begin{itemize}
     \item There will be forbidden words \pause
-    \begin{itemize}
-      \item We can find these by using the orbit of any whole number in these bases (one is the easiest choice) \pause
-    \end{itemize}
     \item It is easy/interesting to represent certain numbers in these bases \pause
     \item Arithmetic is more of a pain than usual
   \end{itemize}
@@ -774,23 +771,13 @@
 \end{frame}
 
 \begin{frame}{Escaping the Beta Map}
-  \begin{example}[Golden Base Ratio: $T(0.011_\varphi)$]
+  \begin{example}[Golden Base Ratio: $T(0.01101_\varphi)$]
     Using our previous example:
-    $$T(0.011_\varphi)=0.11_\varphi=1.00_\varphi.$$ \pause
+    $$T(0.01101_\varphi)=0.1101_\varphi=1.0001_\varphi.$$ \pause
     But that can't happen! By definition, $T:[0,1)\to[0,1)$. As such, we say that this is a forbidden word. \pause
 
     Geometrically, this can't happen. If we multiply a number in [0,1) by any number and perform (mod 1), we will never get a number larger than one. It's the arithmetic equivalent of having $x\cdot\beta > \beta,\ x<1$.
   \end{example}
-\end{frame}
-
-\begin{frame}{Finding Forbidden Words}
-  \begin{itemize}
-    \item Take the orbit of one in the base \pause
-    \item Find the period of the orbit and take one segment \pause
-    \begin{itemize}
-      \item Any sequence of numerals greater than the numerals of the period is not allowed
-    \end{itemize}
-  \end{itemize}
 \end{frame}
 
 \begin{frame}{Definition}
@@ -803,8 +790,18 @@
 
     $1_{9} = 0.\overline{88}_{9}$ \pause
 
-    $1_{2} = 0.\overline{11}_{8}$
+    $1_{2} = 0.\overline{11}_{2}$
   \end{example}
+\end{frame}
+
+\begin{frame}{Finding Forbidden Words}
+  \begin{itemize}
+    \item Take the orbit of one in the base \pause
+    \item Find the period of the orbit and take one segment \pause
+    \begin{itemize}
+      \item Any sequence of numerals greater than the numerals of the period is not allowed
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Finding Forbidden Words}
